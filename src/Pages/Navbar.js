@@ -25,6 +25,7 @@ function Navbar() {
   const handleGomob = () => {
     const isRootDomain = window.location.pathname === '/';
     const caseStudiesSection = document.getElementById('caseStudiesmob');
+    console.log("aaaa" + caseStudiesSection)
     if (caseStudiesSection) {
       caseStudiesSection.scrollIntoView({ behavior: 'smooth' });
     }
