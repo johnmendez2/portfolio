@@ -1,0 +1,49 @@
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from 'react';
+import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import Homepage from './Pages/Homepage'; 
+import JohnsFS from './Casestudies/jfs';
+import Projects from './Pages/Projects';
+import Compvis from './Casestudies/compvis';
+import Roboads from './Casestudies/roboads';
+function App() {
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+    
+  const handleScroll = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    setShowScrollToTop(scrollTop > 0);
+  };
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  return (
+    <div>
+          <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/JohnsFootballShirts" element={<JohnsFS />} />
+        <Route path="/ComputerVision" element={<Compvis />} />
+        <Route path="/RoboAds" element={<Roboads />} />
+      </Routes>
+    </Router>
+            {showScrollToTop && (
+        <div className="scroll-to-top" onClick={handleScrollToTop}>
+          <FontAwesomeIcon icon={faArrowUp} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default App;
