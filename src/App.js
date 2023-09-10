@@ -10,6 +10,7 @@ import Compvis from './Casestudies/compvis';
 import Roboads from './Casestudies/roboads';
 import Supermarket from './Casestudies/supermarket';
 import Jewelrystore from './Casestudies/jewelrystore';
+import Websites from './Pages/Websites';
 function App() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
     
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/websites" element={<Websites />} />
         <Route path="/JohnsFootballShirts" element={<JohnsFS />} />
         <Route path="/ComputerVision" element={<Compvis />} />
         <Route path="/Supermarket" element={<Supermarket />} />

@@ -68,7 +68,10 @@ function Navbar() {
           >
             CASE STUDIES
           </div>
-          <div className="projects" onClick={() => navigate('/projects')}>
+          <div className="case" onClick={() => navigate('/websites')}>
+            WEBSITES
+          </div>
+          <div className="case" onClick={() => navigate('/projects')}>
             PROJECTS
           </div>
           <div className="contact" onClick={handleContact}>
@@ -87,6 +90,9 @@ function Navbar() {
             onClick={handleGomob}
           >
             CASE STUDIES
+          </div>
+          <div className="case" onClick={() => navigate('/websites')}>
+            WEBSITES
           </div>
           <div className="projects" onClick={() => navigate('/projects')}>
           PROJECTS

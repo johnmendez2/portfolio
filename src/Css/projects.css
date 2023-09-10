@@ -28,6 +28,7 @@
   .card img {
     width: 190px;
     height: 350px;
+    object-fit: cover; /* Crop the image to fit the specified width and height */
     margin-right: 20px; /* Add margin for spacing between image and text */
   }
   
@@ -91,11 +92,12 @@
     padding: 0px 0px 0px 0px;
     width: 350px;
     margin-bottom: 70px;
-   height: 200px;
+   height: 220px;
   }
   .card img {
     width: 100px;
     height: auto;
+    object-fit: cover; /* Crop the image to fit the specified width and height */
     margin-right: 20px; /* Add margin for spacing between image and text */
   }
   .card-content {
